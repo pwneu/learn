@@ -8,8 +8,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Pwneu",
+  tagline: "CTF-Based Cybersecurity Learning",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -40,8 +40,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/pwneu/learn/tree/main/modules",
         },
         blog: {
           showReadingTime: true,
@@ -51,8 +50,7 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/pwneu/learn/tree/main/blog",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -77,11 +75,11 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Modules",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/pwneu/learn",
             label: "GitHub",
             position: "right",
           },
