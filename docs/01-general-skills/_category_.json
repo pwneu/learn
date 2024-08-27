@@ -1,0 +1,10 @@
+{
+  "label": "General Skills",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "This section blablabla."
+  }
+}

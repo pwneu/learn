@@ -1,0 +1,10 @@
+{
+  "label": "Cryptography",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn the fundamentals of Cryptography"
+  }
+}
