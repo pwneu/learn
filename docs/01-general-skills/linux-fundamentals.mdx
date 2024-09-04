@@ -1,5 +1,171 @@
 ---
 title: Linux Fundamentals
+sidebar_position: 1 
 ---
 
-# Linux Fundamentals
+## Introduction to Linux
+
+Linux is a powerful and flexible open-source operating system widely used in servers, desktops, embedded systems, and more. Understanding Linux fundamentals is crucial for anyone working in IT, cybersecurity, or software development.
+
+## Why Learn Linux?
+
+- **Open Source:** Linux is free and open-source, allowing users to modify and distribute the software.
+- **Security:** Linux is known for its strong security model, making it a preferred choice for servers and critical systems.
+- **Stability:** Linux systems are highly stable and can run for long periods without needing a reboot.
+- **Community Support:** A large, active community provides extensive documentation, forums, and tools.
+
+## Basic Linux Commands
+
+### Navigating the File System
+
+- `ls`: Lists files and directories in the current directory.
+- `cd`: Changes the current directory.
+- `pwd`: Prints the current working directory.
+
+Example:
+
+- Navigates to the home directory using `~`.
+```bash
+cd ~ 
+```
+- This shows what directory you are currently on.
+```bash
+pwd 
+```
+- List all files in the current directory including hidden files.
+```bash
+ls -la 
+```
+
+### Managing Files and Directories
+
+- `touch`: Creates a file
+- `cp`: Copies files or directories.
+- `mv`: Moves or renames files or directories.
+- `rm`: Removes files or directories.
+- `mkdir`: Creates a new directory.
+
+Example: 
+
+- Creates a file named `file.txt`.
+```bash
+touch file.txt
+```
+
+- Creates a copy of `file.txt` named `copiedFile.txt` in the current directory using `.`.
+```bash
+cp file.txt copiedFile.txt
+```
+
+:::info
+You can autocomplete the name of the existing file or a directory by pressing the `Tab` key.
+:::
+
+- Renames `copiedFile.txt` to `renamedFile.txt`.
+```bash
+mv copiedFile.txt renamedFile.txt 
+```
+
+- Deletes a file.
+```bash
+rm renamedFile.txt 
+```
+
+- Another way of deleting a file but it's not advisable.
+```bash
+mv file.txt /dev/null
+```
+
+- Creates a directory named `new_directory`.
+```bash
+mkdir new_directory
+```
+
+- Removes a directory named `new_directory` by specifying `-r` meaning recursive.
+```bash
+rm -r new_directory
+```
+
+### Viewing and Editing Files
+
+- `cat`: Displays the contents of a file.
+- `less`: Views the contents of a file page by page.
+- `nano`: Opens a file in the `Nano` text editor.
+- `vim`: Opens a file in the `Vim` text editor.
+
+Example:
+
+- Shows the content of a file.
+```bash
+cat file.txt 
+```
+
+- Similar to `cat` but with scrolling when the content is large.
+```bash
+less file.txt 
+```
+
+- Edits a file using `Nano`.
+```bash
+nano file.txt 
+```
+
+- Edits a file using `Vim`.
+```bash
+vim file.txt
+```
+
+:::info Exiting Vim
+If you're stuck in Vim. You can exit without saving changes by pressing `Esc` 3 times (or more) and typing `:q!` and `Enter`.
+:::
+
+### User and Permission Management
+
+- `sudo`: Executes a command as the superuser or another user.
+- `chmod`: Changes file or directory permissions.
+- `chown`: Changes the owner of a file or directory.
+- `passwd`: Changes the user password.
+
+Example:
+
+- Similar to checking for updates in Windows.
+```bash
+sudo apt-get update
+```
+
+- Updates all your packages.
+```bash
+sudo apt-get upgrade
+```
+
+## Checking Network Configuration
+
+- Installs network-related commands.
+```bash
+sudo apt install net-tools
+```
+- Displays network interfaces and their configurations.
+```bash
+ifconfig
+```
+
+- Displays network connections, routing tables, and interface statistics.
+```bash
+netstat
+```
+
+Tests connectivity to another host.
+```bash
+ping google.com
+```
+
+:::info Cancelling commands
+You can cancel commands by pressing `Ctrl + C`. In most linux terminals, you copy text using the `Ctrl + Shift + C` command.
+:::
+
+## External Resources
+
+- [Linux Documentation Project](http://www.tldp.org/)
+- [Linux Command Cheat Sheet](https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/)
+- [GNU/Linux Beginner's Guide](https://www.gnu.org/gnu/linux-and-gnu.html)
+- [The Linux Foundation](https://www.linuxfoundation.org/)
