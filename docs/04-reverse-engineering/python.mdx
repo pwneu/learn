@@ -9,6 +9,8 @@ title: Python
 <br/>
 <br/>
 
+Python is a versatile programming language known for its readability and ease of use. While it is widely used in software engineering, it also has significant applications in reverse engineering and cybersecurity. Python’s rich ecosystem of libraries and tools makes it a powerful choice for tasks related to security analysis, vulnerability assessment, and reverse engineering.
+
 ## Installation 
 
 #### Windows 11
@@ -19,4 +21,101 @@ winget install -e --id Python.Python.3.11
 #### Debian
 ```
 sudo apt install steghide
+```
+
+## Python in CyberSecurity
+
+In cybersecurity, Python is used for a wide range of tasks including penetration testing, malware analysis, and network security. Its flexibility and the availability of specialized libraries make it an excellent choice for developing security tools and automating security tasks.
+
+### Simple Port Scanner
+
+```python
+import socket
+
+def scan_ports(host, ports):
+    open_ports = []
+    for port in ports:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(1)
+            result = sock.connect_ex((host, port))
+            if result == 0:
+                open_ports.append(port)
+    return open_ports
+
+# Usage
+host = '127.0.0.1'
+ports = [22, 80, 443, 8080]
+open_ports = scan_ports(host, ports)
+print(f'Open Ports: {open_ports}')
+```
+
+### Analyzing HTTP Headers
+Python can be used to analyze HTTP headers for security testing or information gathering.
+
+```python
+import requests
+
+def get_http_headers(url):
+    response = requests.get(url)
+    headers = response.headers
+    return headers
+
+# Usage
+url = 'http://example.com'
+headers = get_http_headers(url)
+for key, value in headers.items():
+    print(f'{key}: {value}')
+```
+
+## Python in Reverse Engineering
+
+In reverse engineering, Python is used to analyze and understand software, uncover vulnerabilities, and deconstruct malicious code. Its extensive libraries and easy syntax make it a popular choice for developing tools and scripts for various reverse engineering tasks.
+
+### Analyzing a Binary File
+
+Python can be used to analyze binary files and extract information. The `struct` module helps in unpacking binary data into a readable format.
+
+```python
+import struct
+
+def unpack_binary_file(file_path):
+    with open(file_path, 'rb') as f:
+        data = f.read()
+
+    # Example: Unpacking an integer from binary data
+    integer_value = struct.unpack('I', data[:4])[0]
+    print(f'Unpacked Integer: {integer_value}')
+
+# Usage
+unpack_binary_file('example.bin')
+```
+### Extracting Strings from Binary
+
+You can use Python to extract human-readable strings from binary files, which can be useful in reverse engineering to identify embedded data or strings.
+
+```python
+def extract_strings(file_path, min_length=4):
+    with open(file_path, 'rb') as f:
+        data = f.read()
+    
+    # Extract printable ASCII strings
+    strings = []
+    current_string = []
+    for byte in data:
+        if 32 <= byte <= 126:
+            current_string.append(chr(byte))
+        else:
+            if len(current_string) >= min_length:
+                strings.append(''.join(current_string))
+            current_string = []
+    
+    if len(current_string) >= min_length:
+        strings.append(''.join(current_string))
+    
+    return strings
+
+# Usage
+strings = extract_strings('example.bin')
+for string in strings:
+    print(f'Extracted String: {string}')
 ```
