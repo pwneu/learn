@@ -1,21 +1,19 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import { themes as prismThemes } from "prism-react-renderer";
+
+const organizationName = "pwneu";
+const projectName = "learn";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Pwneu",
   tagline: "CTF-Based Cybersecurity Learning",
   favicon: "img/favicon.ico",
-  url: "https://github.com",
-  baseUrl: "/learn/",
-  organizationName: "pwneu",
-  projectName: "learn",
+  url: `https://${organizationName}.github.io`,
+  baseUrl: `${projectName}`,
   trailingSlash: false,
+
+  organizationName,
+  projectName,
 
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -34,7 +32,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/pwneu/learn/tree/main/modules",
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
         },
         blog: {
           showReadingTime: true,
@@ -44,7 +42,7 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/pwneu/learn/tree/main/blog",
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
         },
         theme: {
           customCss: "./src/css/custom.css",
