@@ -1,0 +1,110 @@
+---
+title: JSON Web Tokens
+---
+
+## Introduction to JSON Web Tokens (JWT)
+
+<img src="https://raw.githubusercontent.com/jsonwebtoken/jsonwebtoken.github.io/master/img/website/pic_logo.svg" alt="ffuf logo" height="150" />
+
+<br/>
+<br/>
+
+JSON Web Tokens (JWT) are an open standard (RFC 7519) for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair (using RSA or ECDSA).
+
+JWTs are commonly used for authorization. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token.
+
+## Structure of a JWT
+
+A JSON Web Token consists of three parts:
+
+1. **Header**
+2. **Payload**
+3. **Signature**
+
+Each part is encoded in Base64Url, and the token is represented as follows:
+
+```
+header.payload.signature
+```
+
+### Header
+
+The header typically consists of two parts:
+
+- The type of the token, which is JWT.
+- The signing algorithm being used, such as HMAC SHA256 or RSA.
+
+Example of a JWT header:
+
+```js
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+
+### Payload
+
+The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are three types of claims:
+
+- **Registered claims**: A set of predefined claims which are not mandatory but recommended. Some of them are `iss` (issuer), `exp` (expiration time), `sub` (subject), and `aud` (audience).
+- **Public claims**: These can be defined at will, but to avoid collisions, they should be defined in the IANA JSON Web Token Registry.
+- **Private claims**: Custom claims created to share information between parties that agree on using them.
+
+Example of a JWT payload:
+
+```js
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "admin": true
+}
+```
+
+### Signature
+
+To create the signature part, you must take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign it.
+
+HMAC SHA256 example:
+
+```js
+HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  secret
+)
+```
+
+The signature is used to verify that the sender of the JWT is who it says it is and to ensure that the message wasn't changed along the way.
+
+## How JWT Works
+
+1. The user logs in using their credentials.
+2. The server generates a JWT and sends it to the user.
+3. The client (usually a browser) stores the JWT.
+4. With every request, the client sends the JWT as a Bearer token in the `Authorization` header.
+5. The server verifies the token and responds with the requested data if valid.
+
+## Example of a JWT
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+### Decoding a JWT
+
+You can decode a JWT by splitting the string by the `.` character. The first part is the header, the second is the payload, and the third is the signature. The header and payload are Base64Url encoded and can be decoded easily.
+
+## Verifying the Signature
+
+To verify the signature, the server will:
+
+1. Take the received JWT's header and payload.
+2. Recompute the signature using the stored secret.
+3. Compare the recomputed signature with the received signature.
+
+If they match, the token is valid; otherwise, it has been tampered with.
+
+## External Resources
+
+- [JWT.io](https://jwt.io)
+- [Auth0: Introduction to JWT](https://auth0.com/learn/json-web-tokens/)

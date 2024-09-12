@@ -1,0 +1,61 @@
+---
+title: Base 64
+---
+
+## Introduction to Base 64 Encoding
+
+Base 64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format. It is used to encode data into a format that can be easily transmitted over media that are designed to handle text. Base 64 encoding is commonly used in email, URLs, and data storage to ensure that binary data remains intact during transport.
+
+## How Base 64 Encoding Works
+
+Base 64 encoding works by dividing the input data into chunks of 24 bits. Each 24-bit chunk is split into four 6-bit groups. Each 6-bit group is then mapped to a Base 64 alphabet, which consists of 64 different characters. The Base 64 alphabet includes:
+
+- Uppercase letters (A-Z)
+- Lowercase letters (a-z)
+- Digits (0-9)
+- Two additional characters (typically `+` and `/`)
+
+For example, the Base 64 alphabet used in standard encoding is:
+
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+```
+
+If the input data does not align perfectly with the 24-bit chunks (which often happens), padding characters (`=`) are added to ensure that the final encoded output length is a multiple of 4 characters.
+
+## Encoding Example
+
+To encode the string "hello" in Base 64:
+
+1. Convert the string to its binary representation.
+2. Group the binary data into 24-bit chunks.
+3. Divide each 24-bit chunk into four 6-bit groups.
+4. Map each 6-bit group to a Base 64 character.
+5. Concatenate the resulting characters.
+
+For `hello`, the Base 64 encoded result is `aGVsbG8=`.
+
+## Decoding Base 64
+
+Decoding Base 64 encoded data involves reversing the encoding process:
+
+1. Convert each Base 64 character back to its 6-bit binary representation.
+2. Combine the binary data into 24-bit chunks.
+3. Convert the 24-bit chunks back to their original binary form.
+4. Translate the binary data back to the original text or binary data.
+
+## Applications of Base 64 Encoding
+
+Base 64 encoding is used in various scenarios, including:
+
+- **Email Encoding**: Base 64 encoding is used in MIME (Multipurpose Internet Mail Extensions) to encode email attachments and other binary data.
+- **URL Encoding**: Base 64 encoding can be used to encode data in URLs to ensure that special characters are properly transmitted.
+- **Data Storage**: Base 64 encoding is used to store binary data in XML or JSON formats, making it easier to transmit and store data in text-based formats.
+
+## External Resources
+
+- [Base64 Encode/Decode Online Tool](https://www.base64decode.net/)
+- [Base64 Encoding Explained](https://en.wikipedia.org/wiki/Base64)
+- [RFC 4648: Base 64 Encoding](https://tools.ietf.org/html/rfc4648)
+
+Base 64 encoding provides a straightforward way to encode binary data into a text format that is safe for transmission and storage in text-based systems.
