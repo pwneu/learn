@@ -5,9 +5,9 @@ const projectName = "learn";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Pwneu",
+  title: "PWNEU",
   tagline: "CTF-Based Cybersecurity Learning",
-  favicon: "img/favicon.ico",
+  favicon: "img/PWNEU_RootLogo.svg",
   url: `https://${organizationName}.github.io`,
   baseUrl: `${projectName}`,
   trailingSlash: false,
@@ -57,19 +57,23 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/PWNEU_LightGreenLogo.svg",
+          srcDark: "img/PWNEU_DarkGreenLogo.svg",
         },
         items: [
+          { to: "/explorer", label: "Explorer", position: "left" },
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "Modules",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/cybersecurity-terms", label: "Cybersecurity Terms", position: "left" },
+          { to: "/recommended-tools", label: "Recommended Tools", position: "left" },
+          { to: "/resource-libraries", label: "Resource Libraries", position: "left" },
+          { to: "/career-development", label: "Career Development", position: "left" },
           {
             href: "https://github.com/pwneu/learn",
             label: "GitHub",
@@ -77,51 +81,52 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
+      // footer: {
+      //   style: "dark",
+      //   links: [
+      //     {
+      //       title: "Docs",
+      //       items: [
+      //         {
+      //           label: "Tutorial",
+      //           to: "/docs",
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: "Community",
+      //       items: [
+      //         {
+      //           label: "Stack Overflow",
+      //           href: "https://stackoverflow.com/questions/tagged/docusaurus",
+      //         },
+      //         {
+      //           label: "Discord",
+      //           href: "https://discordapp.com/invite/docusaurus",
+      //         },
+      //         {
+      //           label: "Twitter",
+      //           href: "https://twitter.com/docusaurus",
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: "More",
+      //       items: [
+      //         {
+      //           label: "Blog",
+      //           to: "/blog",
+      //         },
+      //         {
+      //           label: "GitHub",
+      //           href: "https://github.com/facebook/docusaurus",
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      // },
+        
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
