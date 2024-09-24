@@ -1,0 +1,96 @@
+---
+title: Command Combos
+sidebar_position: 5
+---
+
+## Combining Linux Commands
+
+In Linux and Unix-based systems, it's common to combine multiple commands to create powerful workflows and data manipulations. This is often done using **pipes** (`|`), **redirection**, and **logical operators**.
+
+### Using Pipes (`|`)
+
+A **pipe** is used to send the output of one command as the input to another command. This allows you to chain commands together.
+
+#### Example: `cat` and `grep`
+
+- `cat` prints the contents of a file.
+- `grep` searches for a pattern in the input it receives.
+
+To print the contents of a file and search for a specific word, you can use:
+```bash
+cat file.txt | grep "search-term"
+```
+
+In this example, `cat` sends the file's content to `grep`, which searches for `"search-term"` and displays matching lines.
+
+#### Example: `ls` and `grep`
+
+If you want to list only files that contain a certain keyword:
+```bash
+ls | grep "keyword"
+```
+
+#### Example: Excluding Lines with `cat` and `grep`
+
+You can use `cat *` to print all lines of every file in a directory and `grep -v` to exclude lines that contain a specific keyword:
+```bash
+cat * | grep -v "keyword"
+```
+
+### Combining with Redirection (`>`, `>>`, `<`)
+
+**Redirection** allows you to send the output of a command to a file, or to take input from a file.
+
+#### Example: Saving `grep` Output to a File
+
+You can save the results of a search to a file by redirecting the output using `>`:
+```bash
+cat file.txt | grep "search-term" > results.txt
+```
+
+#### Example: Appending Output to a File
+
+If you want to append the result instead of overwriting:
+```bash
+cat file.txt | grep "search-term" >> results.txt
+```
+
+### Using Logical Operators (`&&`, `||`)
+
+You can use **logical operators** to run multiple commands conditionally.
+
+- `&&` runs the second command **only if** the first succeeds.
+- `||` runs the second command **only if** the first fails.
+
+#### Example: `&&`
+
+To check if a file exists and then delete it if it does:
+```bash
+[ -f file.txt ] && rm file.txt
+```
+
+#### Example: `||`
+
+To attempt a command and display a message if it fails:
+```bash
+mkdir new_folder || echo "Failed to create directory"
+```
+
+### Combining Pipes, Redirection, and Logical Operators
+
+You can combine all of these together for more complex operations.
+
+#### Example: Searching and Saving to a File Only If Results Are Found
+
+```bash
+cat file.txt | grep "search-term" > results.txt && echo "Results saved" || echo "No results found"
+```
+
+In this example:
+- The command searches for `"search-term"`.
+- If it finds results, it saves them to `results.txt` and echoes "Results saved".
+- If no results are found, it echoes "No results found".
+
+## Conclusion
+
+By combining commands with pipes, redirection, and logical operators, you can create highly efficient and customizable workflows in your terminal. Mastering these combinations allows you to perform complex tasks with simple one-liners.

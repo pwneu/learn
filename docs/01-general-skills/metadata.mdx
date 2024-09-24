@@ -1,0 +1,83 @@
+---
+title: Extracting Metadata
+sidebar_position: 3
+---
+
+## Introduction to Exiftool
+
+Exiftool is a powerful command-line tool used to read, write, and manipulate metadata in a variety of file formats. It is widely used in digital forensics, photography, and cybersecurity to extract hidden or embedded information from files, such as images, videos, PDFs, and more. Understanding how to use Exiftool can greatly aid in the analysis of files and uncovering vital metadata.
+
+## Why Use Exiftool?
+
+- **Metadata Extraction:** Exiftool can extract metadata such as timestamps, geolocation, device information, and more.
+- **Forensic Analysis:** In digital forensics, metadata can provide critical insights during investigations, such as identifying when and where files were created.
+- **Cross-Platform:** Exiftool works on Linux, macOS, and Windows, making it versatile across various operating systems.
+- **Supports Multiple File Formats:** Exiftool supports a wide range of file formats, including JPEG, PNG, PDF, and even certain audio and video formats.
+
+## Installation
+
+:::info
+Pre-installed with Kali Linux.
+You can also use the web version on the [Exiftool website](https://exif.tools/).
+:::
+
+### Linux (Debian/Ubuntu)
+```bash
+sudo apt install exiftool
+```
+
+## Basic Exiftool Commands
+
+### Viewing Metadata
+
+To view all metadata of a file:
+```bash
+exiftool file.jpg
+```
+
+To view specific metadata (e.g., `DateTimeOriginal`):
+```bash
+exiftool -DateTimeOriginal file.jpg
+```
+
+### Writing Metadata
+
+To change the `Artist` metadata tag in a file:
+```bash
+exiftool -Artist="John Doe" file.jpg
+```
+
+### Copying Metadata
+
+To copy metadata from one file to another:
+```bash
+exiftool -TagsFromFile source.jpg destination.jpg
+```
+
+### Removing Metadata
+
+To remove all metadata from a file:
+```bash
+exiftool -all= file.jpg
+```
+
+## Advanced Usage
+
+### Extracting GPS Data
+
+To extract GPS coordinates from a file (if available):
+```bash
+exiftool -gpslatitude -gpslongitude file.jpg
+```
+
+### Recursive Metadata Extraction
+
+To recursively extract metadata from all files in a directory:
+```bash
+exiftool -r /path/to/directory
+```
+
+## External Resources
+
+- [Exiftool Official Documentation](https://exiftool.org/)
+- [Exiftool GitHub Repository](https://github.com/exiftool/exiftool)
