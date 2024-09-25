@@ -1,0 +1,62 @@
+---
+title: Hexadecimal
+sidebar_position: 3
+---
+
+## Introduction to Hexadecimal
+
+Hexadecimal, or hex, is a base-16 number system that uses sixteen symbols to represent values: 0-9 for values zero to nine and A-F for values ten to fifteen. Hexadecimal is commonly used in computing as a more human-friendly representation of binary-coded values.
+
+## Converting Hexadecimal to Words
+
+To convert hexadecimal values into words, you need to follow a few steps:
+
+1. **Group the Hex Digits**: Split the hexadecimal string into pairs. Each pair of hex digits represents one byte (8 bits).
+
+2. **Convert Hex to Decimal**: For each pair of hex digits, convert the hexadecimal value to its decimal equivalent. You can use the following formula for conversion:
+   - If your hex pair is `AB`, the conversion is calculated as:
+     - A in decimal is 10 (A = 10)
+     - B in decimal is 11 (B = 11)
+     - Therefore, AB = (10 * 16^1) + (11 * 16^0) = 160 + 11 = 171 in decimal.
+
+3. **Map Decimal Values to ASCII Characters**: Each decimal value corresponds to an ASCII character. You can use an ASCII table to find the character that matches the decimal value.
+   - For example, if you convert the hex `48`, the decimal equivalent is `72`, which corresponds to the character `H` in ASCII.
+
+4. **Combine the Characters**: Once you have converted all pairs of hex digits to their respective characters, concatenate them to form the final word or phrase.
+
+### Example
+
+Let's convert the hexadecimal string `48656c6c6f` to words.
+
+1. **Grouping**: 
+   - `48`, `65`, `6c`, `6c`, `6f`
+
+2. **Hex to Decimal Conversion**: 
+   - `48` -> 72
+   - `65` -> 101
+   - `6c` -> 108
+   - `6c` -> 108
+   - `6f` -> 111
+
+3. **Decimal to ASCII Mapping**: 
+   - `72` -> `H`
+   - `101` -> `e`
+   - `108` -> `l`
+   - `108` -> `l`
+   - `111` -> `o`
+
+4. **Combine the Characters**: 
+   - Result: `Hello`
+
+This process can be applied to any hexadecimal string to convert it into human-readable text.
+
+## Applications of Hexadecimal to Words Conversion
+
+- **Data Encoding**: Hexadecimal representation is commonly used in data encoding schemes, and converting it to words can help interpret and understand the encoded data.
+- **Debugging and Reverse Engineering**: Converting hex to words can be useful in debugging scenarios or reverse engineering applications where you need to understand the underlying data.
+- **Networking and Communication**: Hexadecimal is often used in network protocols, and converting hex values to words can help in analyzing network traffic and communication.
+
+## External Resources
+
+- [ASCII Table](https://www.asciitable.com/)
+- [Hex to ASCII Converter Online Tool](https://www.rapidtables.com/convert/number/hex-to-ascii.html)
