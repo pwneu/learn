@@ -1,6 +1,6 @@
 ---
 title: Text Searching
-sidebar_position: 2 
+sidebar_position: 2
 ---
 
 ## Introduction to GREP Command
@@ -8,6 +8,7 @@ sidebar_position: 2
 `grep` (Global Regular Expression Print) is a powerful command-line utility used for searching text using patterns. It is commonly used in Unix-based systems like Linux and macOS to search for specific strings or patterns within files.
 
 ## Practice file
+
 You can download this file to practice `grep`.
 
 ```bash
@@ -17,11 +18,13 @@ wget -O sample.txt https://raw.githubusercontent.com/Donders-Institute/hpc-wiki-
 ## Basic Usage
 
 - To search for a specific text within a file:
+
 ```bash
 grep "used" sample.txt
 ```
 
 - To perform a case-insensitive search:
+
 ```bash
 grep -i "home" sample.txt
 ```
@@ -31,11 +34,13 @@ My apologies for the large output. Type `clear` in the terminal to remove all yo
 :::
 
 - To search for whole words only:
+
 ```bash
 grep -w "Program" sample.txt
 ```
 
 - To display line numbers along with matching lines:
+
 ```bash
 grep -n "used" sample.txt
 ```
@@ -64,11 +69,13 @@ Use `-E` to enable extended regular expressions:
 Example:
 
 - Search for `cat` or `dog`
+
 ```bash
 grep -E "cat|dog" sample.txt
 ```
 
 - To search for multiple patterns:
+
 ```bash
 grep -e "max" -e "limited" sample.txt
 ```
@@ -76,6 +83,7 @@ grep -e "max" -e "limited" sample.txt
 ### Searching Recursively
 
 - To search recursively through directories:
+
 ```bash
 grep -r "home" /etc/defaults
 ```
@@ -83,6 +91,7 @@ grep -r "home" /etc/defaults
 ### Inverting Match
 
 - To display lines that do not match the pattern:
+
 ```bash
 grep -v "hi" sample.txt
 ```
@@ -90,6 +99,7 @@ grep -v "hi" sample.txt
 ## Cleanup
 
 - You can now remove the sample file once you're done:
+
 ```bash
 rm sample.txt
 ```

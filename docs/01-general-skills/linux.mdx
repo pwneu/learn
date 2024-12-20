@@ -1,6 +1,6 @@
 ---
 title: Linux Fundamentals
-sidebar_position: 1 
+sidebar_position: 1
 ---
 
 ## Introduction to Linux
@@ -25,16 +25,21 @@ Linux is a powerful and flexible open-source operating system widely used in ser
 Example:
 
 - Navigates to the home directory using `~`.
+
 ```bash
-cd ~ 
+cd ~
 ```
+
 - This shows what directory you are currently on.
+
 ```bash
-pwd 
+pwd
 ```
+
 - List all files in the current directory including hidden files.
+
 ```bash
-ls -la 
+ls -la
 ```
 
 ### Managing Files and Directories
@@ -45,14 +50,16 @@ ls -la
 - `rm`: Removes files or directories.
 - `mkdir`: Creates a new directory.
 
-Example: 
+Example:
 
 - Creates a file named `file.txt`.
+
 ```bash
 touch file.txt
 ```
 
 - Creates a copy of `file.txt` named `copiedFile.txt` in the current directory using `.`.
+
 ```bash
 cp file.txt copiedFile.txt
 ```
@@ -62,26 +69,31 @@ You can autocomplete the name of the existing file or a directory by pressing th
 :::
 
 - Renames `copiedFile.txt` to `renamedFile.txt`.
+
 ```bash
-mv copiedFile.txt renamedFile.txt 
+mv copiedFile.txt renamedFile.txt
 ```
 
 - Deletes a file.
+
 ```bash
-rm renamedFile.txt 
+rm renamedFile.txt
 ```
 
 - Another way of deleting a file but it's not advisable.
+
 ```bash
 mv file.txt /dev/null
 ```
 
 - Creates a directory named `new_directory`.
+
 ```bash
 mkdir new_directory
 ```
 
 - Removes a directory named `new_directory` by specifying `-r` meaning recursive.
+
 ```bash
 rm -r new_directory
 ```
@@ -96,21 +108,25 @@ rm -r new_directory
 Example:
 
 - Shows the content of a file.
+
 ```bash
-cat file.txt 
+cat file.txt
 ```
 
 - Similar to `cat` but with scrolling when the content is large.
+
 ```bash
-less file.txt 
+less file.txt
 ```
 
 - Edits a file using `Nano`.
+
 ```bash
-nano file.txt 
+nano file.txt
 ```
 
 - Edits a file using `Vim`.
+
 ```bash
 vim file.txt
 ```
@@ -129,11 +145,13 @@ If you're stuck in Vim. You can exit without saving changes by pressing `Esc` 3 
 Example:
 
 - Similar to checking for updates in Windows.
+
 ```bash
 sudo apt-get update
 ```
 
 - Updates all your packages.
+
 ```bash
 sudo apt-get upgrade
 ```
@@ -141,21 +159,25 @@ sudo apt-get upgrade
 ## Checking Network Configuration
 
 - Installs network-related commands.
+
 ```bash
 sudo apt install net-tools
 ```
 
 - Displays network interfaces and their configurations.
+
 ```bash
 ifconfig
 ```
 
 - Displays network connections, routing tables, and interface statistics.
+
 ```bash
 netstat
 ```
 
 Tests connectivity to another host.
+
 ```bash
 ping google.com
 ```

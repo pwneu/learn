@@ -10,6 +10,7 @@ The `strings` command is a useful utility in Linux and Unix-based systems that e
 ### Basic Usage
 
 To use the `strings` command, simply specify the binary file as an argument:
+
 ```bash
 strings file.bin
 ```
@@ -21,6 +22,7 @@ This command will output all the sequences of printable characters found in `fil
 #### Specifying Minimum String Length
 
 You can specify a different minimum string length using the `-n` option:
+
 ```bash
 strings -n 6 file.bin
 ```
@@ -30,6 +32,7 @@ In this example, only strings that are 6 characters or longer will be displayed.
 #### Searching in Specific Files
 
 You can also use `strings` to analyze multiple files at once:
+
 ```bash
 strings file1.bin file2.bin
 ```
@@ -39,6 +42,7 @@ This will output the strings found in both files, with filenames as headers for 
 #### Output to a File
 
 To save the extracted strings to a file for later analysis, you can use output redirection:
+
 ```bash
 strings file.bin > output.txt
 ```

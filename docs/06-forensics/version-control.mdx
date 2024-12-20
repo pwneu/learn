@@ -1,16 +1,24 @@
 ---
 title: Version Control
-sidebar_position: 3 
+sidebar_position: 3
 ---
 
 ## Introduction to Git
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="150" height="150">
-  <path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 128 128"
+  width="150"
+  height="150"
+>
+  <path
+    fill="#F34F29"
+    d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"
+  />
 </svg>
 
-<br/>
-<br/>
+<br />
+<br />
 
 Git is a distributed version control system, widely used for managing and tracking changes in software projects. It is not a cybersecurity tool in the traditional sense because it doesn’t directly protect systems, detect vulnerabilities, or respond to threats. Instead, Git is designed to help developers and teams manage their code and collaborate more effectively.
 
@@ -35,59 +43,77 @@ Pre-installed with Kali Linux.
 :::
 
 ### Windows 11
+
 ```bash
 winget install -e --id Git.Git
 ```
 
 ### Linux (Debian/Ubuntu)
+
 ```bash
 sudo apt install git
 ```
 
 ## Git Basics
+
 You can verify the installation using this command.
+
 ```bash
 git --version
 ```
 
 Here is how you can show the list of all commands.
+
 ```bash
 git -h
 ```
 
 ### Cloning a Repository
+
 Here is how you can clone a repository using Git.
+
 ```bash
 git clone https://github.com/pwneu/pwneu.git
 ```
 
 ### Git Branches
+
 To see a list of all the branches in your repository, use:
+
 ```bash
 git branch
 ```
+
 This command shows you all the branches you have, and highlights the branch you're currently working on.
 
 To change from one branch to another, use:
+
 ```bash
 git checkout <branch_name>
 ```
+
 Replace `<branch_name>` with the name of the branch you want to switch to. This command updates your working directory to match the selected branch.
 
 ### Showing Commit History
+
 To see the history of changes made in the current branch, use the following command:
+
 ```bash
 git log
 ```
+
 This command lists all the commits, showing details like who made each change, when it was made, and a brief description of what was changed. It helps you track the evolution of the project over time.
 
 You can use the following command to switch your working directory to the exact state of the repository at a specific commit:
+
 ```bash
 git checkout <commit_hash>
 ```
+
 This command puts you in a special mode where you're not on any branch. Instead, your files will look exactly as they did at that specific commit. In this mode, you can look at or test the old code, but any changes you make won’t be saved to any branch. If you want to keep changes or work on this state, you’ll need to create a new branch from here.
 
 ## External Resources
+
 You can extend you knowledge in Git with these sites:
 
 - https://www.w3schools.com/git/

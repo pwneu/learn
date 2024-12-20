@@ -17,6 +17,7 @@ A **pipe** is used to send the output of one command as the input to another com
 - `grep` searches for a pattern in the input it receives.
 
 To print the contents of a file and search for a specific word, you can use:
+
 ```bash
 cat file.txt | grep "search-term"
 ```
@@ -26,6 +27,7 @@ In this example, `cat` sends the file's content to `grep`, which searches for `"
 #### Example: `ls` and `grep`
 
 If you want to list only files that contain a certain keyword:
+
 ```bash
 ls | grep "keyword"
 ```
@@ -33,6 +35,7 @@ ls | grep "keyword"
 #### Example: Excluding Lines with `cat` and `grep`
 
 You can use `cat *` to print all lines of every file in a directory and `grep -v` to exclude lines that contain a specific keyword:
+
 ```bash
 cat * | grep -v "keyword"
 ```
@@ -44,6 +47,7 @@ cat * | grep -v "keyword"
 #### Example: Saving `grep` Output to a File
 
 You can save the results of a search to a file by redirecting the output using `>`:
+
 ```bash
 cat file.txt | grep "search-term" > results.txt
 ```
@@ -51,6 +55,7 @@ cat file.txt | grep "search-term" > results.txt
 #### Example: Appending Output to a File
 
 If you want to append the result instead of overwriting:
+
 ```bash
 cat file.txt | grep "search-term" >> results.txt
 ```
@@ -65,6 +70,7 @@ You can use **logical operators** to run multiple commands conditionally.
 #### Example: `&&`
 
 To check if a file exists and then delete it if it does:
+
 ```bash
 [ -f file.txt ] && rm file.txt
 ```
@@ -72,6 +78,7 @@ To check if a file exists and then delete it if it does:
 #### Example: `||`
 
 To attempt a command and display a message if it fails:
+
 ```bash
 mkdir new_folder || echo "Failed to create directory"
 ```
@@ -87,6 +94,7 @@ cat file.txt | grep "search-term" > results.txt && echo "Results saved" || echo 
 ```
 
 In this example:
+
 - The command searches for `"search-term"`.
 - If it finds results, it saves them to `results.txt` and echoes "Results saved".
 - If no results are found, it echoes "No results found".

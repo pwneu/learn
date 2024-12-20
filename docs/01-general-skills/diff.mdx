@@ -1,6 +1,6 @@
 ---
 title: File Comparisons
-sidebar_position: 4 
+sidebar_position: 4
 ---
 
 ## Comparing Files
@@ -10,6 +10,7 @@ The `diff` command is a powerful utility used in Linux and Unix-based systems to
 ### Basic Usage
 
 The simplest usage of the `diff` command is:
+
 ```bash
 diff file1.txt file2.txt
 ```
@@ -27,6 +28,7 @@ The output of `diff` includes symbols that indicate the changes:
 - `a`: Indicates that lines are added.
 
 For example, if the output is:
+
 ```
 1,3c1,3
 < Line 1 from file1
@@ -45,6 +47,7 @@ This means that lines 1 to 3 from `file1.txt` should be changed to lines 1 to 3 
 #### Unified Format
 
 You can use the `-u` option to show the differences in a unified format, which is often easier to read:
+
 ```bash
 diff -u file1.txt file2.txt
 ```
@@ -54,6 +57,7 @@ This will display a few lines of context before and after the changes.
 #### Ignore Case
 
 To ignore case differences when comparing files, use the `-i` option:
+
 ```bash
 diff -i file1.txt file2.txt
 ```
@@ -61,6 +65,7 @@ diff -i file1.txt file2.txt
 #### Ignore Whitespace
 
 To ignore changes in whitespace, use the `-w` option:
+
 ```bash
 diff -w file1.txt file2.txt
 ```
@@ -68,6 +73,7 @@ diff -w file1.txt file2.txt
 ### Comparing Directories
 
 You can also compare entire directories with the `-r` option:
+
 ```bash
 diff -r dir1 dir2
 ```
@@ -77,6 +83,7 @@ This will recursively compare all files in `dir1` and `dir2`.
 ### Creating Patch Files
 
 You can create a patch file that contains the differences using the `-u` option combined with output redirection:
+
 ```bash
 diff -u file1.txt file2.txt > changes.patch
 ```
