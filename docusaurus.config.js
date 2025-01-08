@@ -30,8 +30,8 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          path: "modules",
+          routeBasePath: 'modules',
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
         },
         blog: {
@@ -63,20 +63,20 @@ const config = {
           srcDark: "img/PWNEU_DarkGreenLogo.svg",
         },
         items: [
-          { to: "/explorer", label: "Explorer", position: "left" },
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "Modules",
           },
+          { to: "/explorer", label: "Explorer", position: "left" },
           { to: "/cybersecurity-terms", label: "Cybersecurity Terms", position: "left" },
           { to: "/recommended-tools", label: "Recommended Tools", position: "left" },
           { to: "/resource-libraries", label: "Resource Libraries", position: "left" },
           { to: "/career-development", label: "Career Development", position: "left" },
           {
             href: "https://github.com/pwneu/learn",
-            label: "GitHub",
+            className: 'header-github-link',
             position: "right",
           },
         ],
