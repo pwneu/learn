@@ -31,7 +31,7 @@ const config = {
         docs: {
           sidebarPath: "./sidebars.js",
           path: "modules",
-          routeBasePath: 'modules',
+          routeBasePath: "modules",
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
         },
         blog: {
@@ -54,6 +54,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "TXN74OY6W5",
+        // Public API key: it is safe to commit it
+        apiKey: "a67bd5938217ccea15ee4f013a8ad591",
+        indexName: "pwneuio",
+      },
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
@@ -70,13 +77,29 @@ const config = {
             label: "Modules",
           },
           { to: "/explorer", label: "Explorer", position: "left" },
-          { to: "/cybersecurity-terms", label: "Cybersecurity Terms", position: "left" },
-          { to: "/recommended-tools", label: "Recommended Tools", position: "left" },
-          { to: "/resource-libraries", label: "Resource Libraries", position: "left" },
-          { to: "/career-development", label: "Career Development", position: "left" },
+          {
+            to: "/cybersecurity-terms",
+            label: "Cybersecurity Terms",
+            position: "left",
+          },
+          {
+            to: "/recommended-tools",
+            label: "Recommended Tools",
+            position: "left",
+          },
+          {
+            to: "/resource-libraries",
+            label: "Resource Libraries",
+            position: "left",
+          },
+          {
+            to: "/career-development",
+            label: "Career Development",
+            position: "left",
+          },
           {
             href: "https://github.com/pwneu/learn",
-            className: 'header-github-link',
+            className: "header-github-link",
             position: "right",
           },
         ],
@@ -126,7 +149,7 @@ const config = {
       //   ],
       //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       // },
-        
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
