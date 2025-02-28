@@ -28,12 +28,13 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: "./sidebars.js",
-          path: "modules",
-          routeBasePath: "modules",
-          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
-        },
+        // docs: {
+        //   sidebarPath: "./sidebars.js",
+        //   path: "modules",
+        //   routeBasePath: "modules",
+        //   editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
+        // },
+        docs: false,
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -48,6 +49,29 @@ const config = {
           customCss: "./src/css/custom.css",
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "modules",
+        path: "docs/modules",
+        routeBasePath: "modules",
+        sidebarPath: "./sidebars.js",
+        editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "toolkit",
+        path: "docs/toolkit",
+        routeBasePath: "toolkit",
+        sidebarPath: "./sidebars.js",
+        editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
+      },
     ],
   ],
 
@@ -72,35 +96,17 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            docsPluginId: "modules",
+            sidebarId: "modulesSidebar",
             position: "left",
             label: "Modules",
           },
-          { to: "/explorer", label: "Explorer", position: "left" },
           {
-            to: "/cybersecurity-terms",
-            label: "Cybersecurity Terms",
+            type: "docSidebar",
+            docsPluginId: "toolkit",
+            sidebarId: "toolkitSidebar",
             position: "left",
-          },
-          {
-            to: "/recommended-tools",
-            label: "Recommended Tools",
-            position: "left",
-          },
-          {
-            to: "/resource-libraries",
-            label: "Resource Libraries",
-            position: "left",
-          },
-          {
-            to: "/career-development",
-            label: "Career Development",
-            position: "left",
-          },
-          {
-            href: "https://github.com/pwneu/learn",
-            className: "header-github-link",
-            position: "right",
+            label: "Toolkit",
           },
         ],
       },
