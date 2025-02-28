@@ -5,7 +5,7 @@ const projectName = "learn";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "PWNEU",
+  title: "CTF-Based Cybersecurity Learning",
   tagline: "CTF-Based Cybersecurity Learning",
   favicon: "img/PWNEU_RootLogo.svg",
   url: `https://${organizationName}.github.io`,
@@ -89,7 +89,7 @@ const config = {
       image: "img/docusaurus-social-card.jpg",
       navbar: {
         logo: {
-          alt: "My Site Logo",
+          alt: "PWNEU Logo",
           src: "img/PWNEU_LightGreenLogo.svg",
           srcDark: "img/PWNEU_DarkGreenLogo.svg",
         },
@@ -107,6 +107,11 @@ const config = {
             sidebarId: "toolkitSidebar",
             position: "left",
             label: "Toolkit",
+          },
+          {
+            href: "https://github.com/pwneu/learn",
+            className: "header-github-link",
+            position: "right",
           },
         ],
       },

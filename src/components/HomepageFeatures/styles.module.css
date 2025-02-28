@@ -5,7 +5,10 @@
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+
+.description {
+  padding: 0 90rem 2rem 7rem;
+  size: 1.0rem;
 }
+
+

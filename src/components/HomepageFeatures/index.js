@@ -4,46 +4,68 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Cybersecurity Training',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+       Enhance your skills with our in-depth courses covering a wide range of cybersecurity topics, from fundamental principles to advanced techniques.
+      
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Hands-On Labs and Simulations',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+       Gain practical experience through interactive labs and simulations that replicate real-world scenarios, helping you to apply what you've learned in a safe environment.
+     
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Up-to-Date Content',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Stay current with the latest trends and threats in cybersecurity through continuously updated content that reflects the evolving landscape of digital security.
+       
+      </>
+    ),
+  },
+  {
+    title: 'Flexible Learning Options',
+    description: (
+      <>
+       Access courses at your own pace, anytime and anywhere, with our user-friendly LMS platform designed to fit into your busy schedule.
+     
+      </>
+    ),
+  },
+  {
+    title: 'Engaging Capture the Flag (CTF) Competitions',
+    description: (
+      <>
+        Test your skills in real-world scenarios with our exciting CTF challenges. Compete against peers, solve complex problems, and earn recognition for your achievements.
+
+      </>
+    ),
+  },
+  {
+    title: 'Cybersecurity Law in the Philippines',
+    description: (
+      <>
+        As part of the curriculum, you will gain a thorough understanding of Republic Act No. 10175 – the Cybercrime Prevention Act of 2012.
+      
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
+      
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <Heading as="h4">{title}</Heading>
+        <p>{description}</p>  
       </div>
     </div>
   );
