@@ -1,0 +1,10 @@
+{
+  "label": "Writeups Repositories",
+  "position": 4,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Designing Capture The Flag (CTF) challenges involves a variety of tools and techniques that help creators craft engaging and educational experiences. These tools are essential for building tasks that test participants' skills in areas like cryptography, web security, and reverse engineering, ensuring the challenges are both fun and rewarding for competitors."
+  }
+}
