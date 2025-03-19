@@ -19,6 +19,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
+  --ifm-background-color: #121212;
   --ifm-color-primary: #c7ff20dc;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,7 +28,6 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  
 }
 
 .header-github-link::before {
@@ -56,3 +56,13 @@
 [data-theme='dark'] .DocSearch-Hit[aria-selected=true] mark {
     color: #000000 !important;
 }
+
+/* Footer Styles */
+.footer {
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* Light text color */
+  padding: 7px;
+  text-align: center;
+  font-size: 14px;
+}
+
