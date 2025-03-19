@@ -27,6 +27,7 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
 }
 
 .header-github-link::before {
@@ -42,4 +43,16 @@
 
 .header-github-link:hover::before {
   background-color: var(--ifm-navbar-link-hover-color);
+  color: black; /* Change text color to black on hover */
+}
+
+/* Dark mode override */
+[data-theme='dark'] .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Tree,
+[data-theme='dark'] .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-action,
+[data-theme='dark'] .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-icon,
+[data-theme='dark'] .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-path,
+[data-theme='dark'] .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-text,
+[data-theme='dark'] .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-title,
+[data-theme='dark'] .DocSearch-Hit[aria-selected=true] mark {
+    color: #000000 !important;
 }
