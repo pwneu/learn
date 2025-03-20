@@ -7,7 +7,7 @@ const projectName = "learn";
 const config = {
   title: "CTF-Based Cybersecurity Learning",
   tagline: "CTF-Based Cybersecurity Learning",
-  favicon: "img/PWNEU_RootLogo.svg",
+  favicon: "img/rootlogo.svg",
   url: `https://${organizationName}.github.io`,
   baseUrl: `${projectName}`,
   trailingSlash: false,
