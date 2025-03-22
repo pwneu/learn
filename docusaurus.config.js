@@ -73,6 +73,16 @@ const config = {
         editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "article",
+        path: "docs/article",
+        routeBasePath: "article",
+        sidebarPath: "./sidebars.js",
+        editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
+      },
+    ],
   ],
 
   themeConfig:
@@ -107,6 +117,13 @@ const config = {
             sidebarId: "toolkitSidebar",
             position: "left",
             label: "Toolkit",
+          },
+          {
+            type: "docSidebar",
+            docsPluginId: "article",
+            sidebarId: "articleSidebar",
+            position: "left",
+            label: "Articles",
           },
           {
             href: "https://github.com/pwneu/learn",
