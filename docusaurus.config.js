@@ -83,6 +83,17 @@ const config = {
         editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "ra-cybercrime",
+        path: "docs/ra-cybercrime",
+        routeBasePath: "ra-cybercrime",
+        sidebarPath: "./sidebars.js",
+        editUrl: `https://github.com/${organizationName}/${projectName}/tree/main`,
+      },
+    ],
+    
   ],
 
   themeConfig:
@@ -124,6 +135,14 @@ const config = {
             sidebarId: "articleSidebar",
             position: "left",
             label: "Articles",
+          },
+         
+          {
+            type: "docSidebar",
+            docsPluginId: "ra-cybercrime",
+            sidebarId: "raCybercrimeSidebar",
+            position: "left",
+            label: "Cybercrime Prevention Act of 2012",
           },
           {
             href: "https://github.com/pwneu/learn",
