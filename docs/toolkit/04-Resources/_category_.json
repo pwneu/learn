@@ -1,8 +1,8 @@
 {
   "label": "Resources",
   "position":4,
-  "collapsible": true,
-  "collapsed": true,
+  "collapsible": true, 
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "."

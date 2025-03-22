@@ -1,8 +1,8 @@
 {
   "label": "Forensics",
   "position": 6,
-  "collapsible": true,
-  "collapsed": true,
+  "collapsible": true, 
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "Basic principles of digital forensics, including the collection, analysis, and preservation of electronic evidence to investigate and respond to cyber incidents. Topics include the collection, preservation, and analysis of electronic evidence, forensic tools and techniques, and the legal aspects of digital forensics."

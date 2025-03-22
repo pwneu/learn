@@ -1,8 +1,8 @@
 {
   "label": "Recommended Tools",
   "position": 4,
-  "collapsible": true,
-  "collapsed": true,
+  "collapsible": true, 
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "Tackling Capture The Flag (CTF) challenges requires a diverse set of tools and techniques to unravel the puzzles crafted by challenge designers. These resources empower participants to apply their problem-solving abilities across various technical domains, making the process of solving both an exciting test of skill and a rewarding learning experience."

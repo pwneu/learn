@@ -1,4 +1,6 @@
 {
   "label": "Reverse Engineering",
-  "position": 4 
+  "position": 4,
+  "collapsible": true, 
+  "collapsed": false
 }

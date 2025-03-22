@@ -1,8 +1,8 @@
 {
   "label": "General Skills",
   "position": 1,
-  "collapsible": true,
-  "collapsed": true,
+  "collapsible": true, 
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "Provides a foundational understanding of cybersecurity, covering key concepts such as threat landscapes, attack vectors, and defense mechanisms."

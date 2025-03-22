@@ -2,7 +2,7 @@
   "label": "OSINT",
   "position": 2,
   "collapsible": true,
-  "collapsed": true,
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "Introduction to Open-Source Intelligence (OSINT) principles, techniques, and tools for gathering information from publicly available sources. The module covers OSINT techniques, tools, and the ethical considerations involved in intelligence gathering."

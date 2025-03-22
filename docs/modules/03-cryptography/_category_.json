@@ -1,8 +1,8 @@
 {
   "label": "Cryptography",
   "position": 3,
-  "collapsible": true,
-  "collapsed": true,
+  "collapsible": true, 
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "The study of steganography techniques, including historical and modern encryption techniques. Topics covered include symmetric and asymmetric encryption, hashing, digital signatures, and key management."
