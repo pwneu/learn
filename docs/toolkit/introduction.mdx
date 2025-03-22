@@ -11,3 +11,112 @@ Developed and maintained by PWNEU, the cybersecurity community of New Era Univer
 Contributions are highly encouraged—feel free to submit a pull request. ❤️
 
 Disclaimer: The software and resources listed here are not owned by the maintainers and have been compiled solely for educational purposes.
+
+## Optional Tutorial: Social Engineering Toolkit (SET)
+
+#### Use this optional tutorial to explore the Social Engineering Toolkit (SET).
+
+Phishing is a widespread tactic leveraged by attackers of all skill levels. Regardless of how secure a system is, a user will almost always act as the weakest link. Despite careful training, awareness, and monitoring, many users fall trapped to phishing pages designed to trick users into installing malware or providing sensitive information.
+
+While some threat actors may leverage custom tools targeted toward specific organizations, or even people, countless tools exist to create high-quality phishing pages and templates.
+
+[SET is available for download via the official Git repo](https://github.com/trustedsec/social-engineer-toolkit) and it comes preinstalled with Kali Linux.
+
+# Getting Set Up
+
+You can install SET by either setting up your own Kali Linux box or by downloading it from its official Git Repo. We recommend downloading SET from its official Git repo. Note that this may require you to install Python 3 and pip3 first!
+
+1. If you don’t already have Python 3 installed, install it. [You can follow the Installing Python section of our Codecademy Installing Python 3 and Python Packages article.](https://www.codecademy.com/article/install-python3) This should also install **pip**, which you will need for the SET installation.
+2. If pip was not installed properly, [use the pip documentation to install it properly for your Operating system.](https://pip.pypa.io/en/stable/installation/)
+3. [Install SET using the necessary commands from its official Git repo.](https://github.com/trustedsec/social-engineer-toolkit#installation)
+
+## Starting SET
+To begin, let’s start running SET.
+
+To run SET type the following in your terminal:
+
+```bash
+sudo setoolkit
+```
+
+sudo will ask for your password, and this is normal! It will want the computer password.
+
+:::note
+It may not look like you’re typing anything as you type your password, but it is working! Press Enter once you’ve typed your password. 
+:::
+
+You should see something similar to the image below:
+
+<img
+  src="https://static-assets.codecademy.com/Paths/cybersecurity-analyst-career-path/fundamentals-of-cybersecurity/cyber-attacks/social-engineering/set/running-set.png"
+  alt="running-set.png"
+/>
+
+SET should be up to date, however, in the case that it is not, we can update our version of SET to ensure it contains the most recent modules.
+
+Select option **4) Update the Social-Engineer Toolkit** to update SET.
+
+# Creating a Phishing Page
+With SET updated, let us dive into a basic example. We will use SET to create a phishing page that mimics Google’s login page.
+
+To do this, we will need to use the menu options to choose this attack.
+
+- First, select option 1) Social-Engineering Attacks. This will bring us to the “Website Attack Vectors” and will provide us with a list of techniques and an explanation of each.
+
+- Reading through the provided lists, we should see the following entry:
+
+```bash
+The Credential Harvester method will utilize web cloning of a web- site that has a username and password field and harvest all the information posted to the website.
+```
+
+Since we are looking to create a fake Google login page, this will be our best option.
+
+- Select option 1) Web Templates
+
+- Once we enter ‘1’, it will ask for an IP. For our purposes, we’ll use our local host address, which is: 127.0.0.1 With our IP set, we can now leverage the “Google” template to create our own Google login page.
+
+-  Once we choose the “Google” options, we should see output similar to the below image:
+
+<img
+  src="https://static-assets.codecademy.com/Paths/cybersecurity-analyst-career-path/fundamentals-of-cybersecurity/cyber-attacks/social-engineering/set/google.png"
+  alt="google.png"
+/>
+
+- To verify that it worked, open your browser and enter the following URL: http://127.0.0.1/. If you see that This site can’t be reached, try retyping the URL. If you keep seeing that screen, you may need to edit your security settings to allow this.
+
+:::warning
+If you don’t feel confident editing security settings on your computer DO NOT edit them. You should feel confident before changing settings that keep you secure. While this means you cannot complete the tutorial, you and your computer’s security are more important than an interesting tutorial. 
+:::
+
+- Once it loads, we should see a Google login! To test it out type in a random set of credentials and go back to your terminal.
+
+You should see your input in the terminal similar to the below image:
+
+<img
+  src="https://static-assets.codecademy.com/Paths/cybersecurity-analyst-career-path/fundamentals-of-cybersecurity/cyber-attacks/social-engineering/set/SET-output.png"
+  alt="SET-output.png"
+/>
+
+Just like that we were able to capture a user’s inputs!
+
+Using SET, we can see how easy it may be for an attacker to steal our credentials! This highlights how important it is we remember the critical features of phishing attacks.
+
+## Site Cloner
+Let’s try one more attack, this time with a different feature of the Credential Harvesting function. Instead of using a known template, let’s create our own clone of http://www.stealmylogin.com/demo.html.
+
+- Instead of using the Web Template options, let’s use the Site Cloner.
+- Enter the same IP as before: 127.0.0.1
+- Then, enter the provided URL: http://www.stealmylogin.com/demo.html
+
+Your input should look similar to the below image:
+
+<img
+  src="https://static-assets.codecademy.com/Paths/cybersecurity-analyst-career-path/fundamentals-of-cybersecurity/cyber-attacks/social-engineering/set/site-cloner-input.png"
+  alt="site-cloner-input.png"
+/>
+
+- Just as with the last time, we can view our login by entering http://127.0.0.1/ in our browser and refreshing the page.
+
+Assuming all information was entered correctly, we should see a login page identical to the one hosted at stealmylogin.com!
+
+Seeing how easy this process can be, we should always guarantee that we, and our users, ensure they operate carefully when working with unknown sources.
