@@ -1,0 +1,10 @@
+{
+  "label": "Fundamentals of Cybersecurity", 
+  "position": 1,
+  "collapsible": true, 
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "In this article, we’ll be looking at the potential impacts of cybersecurity breaches. We’ll also be discussing the importance of cybersecurity and the role it plays in protecting your"
+  }
+}
