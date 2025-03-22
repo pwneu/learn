@@ -1,0 +1,95 @@
+---
+title: Phising Techniques
+sidebar_position: 2
+---
+
+In this article, you will learn about how attackers use psychology to bypass technical security measures.
+
+Note: Attempting to phish the credentials of someone without their express consent is illegal. The information presented in this course in no way encourages or condones phishing, and should not be used to attempt a phishing attack.
+
+<img
+  src="https://static-assets.codecademy.com/Courses/introduction-to-cybersecurity/phishing/Cybersecurity_Phishing_v2-02.svg"
+  alt="Cybersecurity_Phishing_v2-02.svg"
+/>
+
+Phishing is one of the most well-known types of cyber attacks. The average internet user has never heard of Kali Linux or written Python scripts to guess passwords, but everyone knows not to respond to an email from a down on their luck Nigerian Prince (well, almost everyone).
+
+One of the reasons that phishing is so common is because it works! No matter what technical controls are in place to secure a system, humans within the system are still hackable. The practice of tricking humans to get important data or access is also known as social engineering.
+
+Estimates range on how effective phishing is, but given that it can be used for everything from credential theft to loading malware in systems, Verizon labeled it the biggest threat to small organizations in 2020.
+
+Sometimes phishing attacks can seem comically implausible, such as this phishing email from an unfortunate astronaut lost in space below. However, with phishing attacks becoming both more common and more sophisticated, it’s vital to be able to identify and stop phishing attacks.
+
+
+<img
+  src="https://static-assets.codecademy.com/Courses/introduction-to-cybersecurity/phishing/nigerian_astronaut_email.png"
+  alt="nigerian_astronaut_email.png"
+/>
+
+## Different Types of Phishing
+All types of phishing rely on social engineering to get a victim to take some action, but there are different methods and targets beyond email, for example:
+
+- Vishing (from “voice phishing”), which refers to the spam calls in which an attacker claims to be from a victim’s bank or law enforcement and tries to extract information.
+- Smishing (from “SMS phishing”) is when an attacker attempts to do the same thing over text message, by sending a malicious link.
+- Webpages, which we’ll discuss in this article.
+Phishing is also categorized by who it targets. Many phishing campaigns send out mass spam emails to individuals and organizations, hoping to catch a victim in a wide net. But sometimes, an attacker has a specific target in mind and sends that target a dedicated, personalized email. This is known as spear phishing. If the target is extremely sought after, like the CEO of a company, it is known as whaling.
+
+Whether it is used to trick someone into sending money, to harvest login credentials, or to download malware, phishing targets humans as an initial attack vector.
+
+## How Does Phishing Work?
+Sometimes phishing attacks are just emails or phone calls that attempt to get a victim to send an attacker money or payment information. Others, such as those that get people to click on links that download malware onto their systems, require more technical finesse. For example, an attacker could:
+
+1. Embed a PDF or Word document with malicious code.
+2. Attach it to a phishing email.
+3. Social engineer a user into downloading and opening it, executing the malicious code.
+
+Often, this malicious code contains the functionality to further spread the virus by sending more phishing emails to the user’s contacts.
+
+## Email Spoofing
+Email spoofing refers to when an attacker falsifies their email headers to make it appear as though the email is coming from someone else. Spoofing is a common component in phishing emails, used in as many as 90% of email fraud attacks.
+
+When you typically send an email, the “from” field is automatically filled out. If my email is john_johnson[@]gmail[.]com, and I send an email to my friend, my friend will see that the email came from my email address. However, you can also send emails with simple scripts (here are instructions for sending an email in Python).
+
+When you write and send an email using a programming script, you can configure the email headers to be whatever you want - meaning that an attacker can put any email as the “sender”, even yours. In order to really see what is going on in an email, you can download it and open it in a code editor, but most email providers allow you to see the email headers from within your email. For example, in Gmail, if you open an email of interest, click on the three vertical dots in the upper right-hand corner, and click on “Show original”, you can see the email headers.
+
+<img
+  src="https://static-assets.codecademy.com/Courses/introduction-to-cybersecurity/phishing/see_email_headers.png"
+  alt="see_email_headers.png"
+/>
+
+These email headers provide valuable information that can help detect phishing, such as the “return-to” address, sender IP, and whether the email failed any protections such as [SPF and DKIM](https://www.csoonline.com/article/3254234/mastering-email-security-with-dmarc-spf-and-dkim.html), which help to fight spoofing (they are the reason emails are automatically sent to your spam folder). If you see a suspicious email, it is always wise to open the headers before responding in order to see if any protection fields “failed”, and to look at the original sender IP. [You can read more about email spoofing here.](https://www.proofpoint.com/us/glossary/email-spoofing)
+
+<img
+  src="https://static-assets.codecademy.com/Courses/introduction-to-cybersecurity/phishing/failing_header.png"
+  alt="failing_header.png"
+/>
+
+
+### Detection Techniques
+Fortunately, there are ways that we can train both ourselves and our organizations not to fall for phishing! Although many phishing websites are near copies of the originals, phishing emails can be easier to spot. Below are three examples of phishing, two emails and one webpage. Can you spot the indications on each that it isn’t legitimate?
+
+#### Example One:
+
+<img
+  src="https://static-assets.codecademy.com/Courses/introduction-to-cybersecurity/phishing/paypal_email.png"
+  alt="paypal_email.png"
+/>
+
+This one is pretty convincing. Did you spot the giveaway? The sender is paypal[.]accounts@gmail[.]com. Remember, anybody can register a @gmail.com address. The real PayPal will always use a business domain: @paypal.com. Another method? You can open developer tools on any buttons in an email to see where they are taking you. Developer tools is a cybersecurity expert’s best friend. It can reveal many secrets that attackers don’t want you to see.
+
+#### Example Two:
+<img
+  src="https://static-assets.codecademy.com/Courses/introduction-to-cybersecurity/phishing/resume.png"
+  alt="resume.png"
+/>
+
+This is also a pretty convincing email, especially if Tom Atwood is in your contacts. In fact, once an attacker compromises an email address, they can use it to distribute more phishing emails to the people in the victim’s contacts list, utilizing email spoofing to make the emails appear to come from known contacts. The fact that the attacker addresses the victim by name would also make this an example of spear phishing. What’s the giveaway here? Take a closer look at that URL - the second “g” in “google” is really a “d”. This means that the link is probably taking you to a malicious fake website which will ask you to log in to Google Drive and steal your credentials.
+
+## Conclusion and Further Reading
+The variety of phishing types, the low cost to create phishing pages, and the ease with which someone can create one, all make phishing a difficult threat to counter. Additionally, regardless of how complex a system is, no system in the world can guarantee against a human employee clicking on a malicious link. This is why it is important to always report suspicious emails or links at work to the appropriate department so that they can block suspicious senders and domains. If you are paying attention to small details and reporting suspicious content, one person can do much to protect an organization and themselves against phishing attacks.
+
+While we’ve talked about some strategies for phishing, you should never use them to harm others. If you’re on the security team at your work, you could run a phishing campaign to see if employees know what types of content to avoid.
+
+
+## Want to Learn More?
+You can use certain tools like [Passive DNS](https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/infosec-guide-domain-monitoring-detecting-phishing-attacks) to find real live phishing pages online, or check out [some real examples of phishing campaigns](https://www.phishing.org/phishing-examples). You can also see them in your email’s spam folder, and even examine the email headers to see where the mail is coming from, but be careful not to click on anything! Finally, you can check out [some famous phishing attacks](https://www.thesslstore.com/blog/the-dirty-dozen-the-12-most-costly-phishing-attack-examples/). Phishing is everywhere - but if you equip yourself and equip others, you should be safe!

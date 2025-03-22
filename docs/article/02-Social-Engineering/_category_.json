@@ -1,0 +1,10 @@
+{
+  "label": "Social Engineering", 
+  "position": 1,
+  "collapsible": true, 
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "In this article, you will learn about social engineering. It is one of the most powerful techniques in a hacker’s arsenal and one of the hardest to defend against."
+  }
+}
