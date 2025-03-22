@@ -5,6 +5,6 @@
   "collapsed": true,
   "link": {
     "type": "generated-index",
-    "description": "This section blablabla."
+    "description": "An exploration of fundamental techniques of steganography, this module covers how to hide information within other files, such as images, audio, or video. It covers various methods of embedding and extracting hidden data, the use of steganographic tools, and the applications and limitations of steganography in cybersecurity."
   }
 }
