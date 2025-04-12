@@ -26,7 +26,7 @@ npx docs-to-pdf --initialDocURLs="https://pwneu.github.io/learn/modules/introduc
 ```
 
 <img
-  src=""
+  src="https://github.com/pwneu/learn/blob/main/static/img/pwneu_tableofcontents.jpg?raw=true"
   alt="Sample_Table-of-Contents"
 />
 
