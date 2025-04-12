@@ -136,13 +136,17 @@ const config = {
             position: "left",
             label: "Articles",
           },
-         
           {
             type: "docSidebar",
             docsPluginId: "ra-cybercrime",
             sidebarId: "raCybercrimeSidebar",
             position: "left",
             label: "Cybercrime Prevention Act of 2012",
+          },
+          {
+            href: "https://github.com/pwneu/learn/blob/main/Download-Learning Materials.md",
+            label: "Docs to PDF ",
+            position: "right",
           },
           {
             href: "https://github.com/pwneu/learn",
