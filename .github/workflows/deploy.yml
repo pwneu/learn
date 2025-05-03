@@ -83,7 +83,7 @@ jobs:
             --paginationSelector="a.pagination-nav__link.pagination-nav__link--next" \
             --excludeSelectors=".margin-vert--xl a,[class^='tocCollapsible'],.breadcrumbs,.theme-edit-this-page" \
             --coverImage="https://pwneu.github.io/learn/img/PWNEU_LightGreenLogo.svg" \
-            --output="pwneu-docs.pdf"
+            --outputPDFFilename="pwneu-docs.pdf"
 
       - name: Commit and Push PDF
         run: |
